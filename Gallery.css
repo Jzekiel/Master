@@ -1,0 +1,1327 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --white-color: #fff;
+    --dark-color: #000;
+    --body-bg-color: #fff;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+    --scroll-car-color: #fff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background:	#292929;
+
+}
+
+section{
+    position: relative;
+
+}
+
+.section{
+    color: var(--white-color);
+    background: var(--section-bg-color);
+    padding: 35px 200px;
+    transition: 0.3s ease;
+    width: 100%;
+
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+header .nav-bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    height: calc(3rem + 2.4rem);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid;
+    transition: 0.4s ease;
+
+}
+
+header .nav-bar:hover{
+    transform: scale(1.03);
+}
+
+.text-content:hover{
+    transform: scale(1.10);
+}
+
+.text-content a{
+    text-decoration: none;
+}
+
+.text-content a:before{
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 0%;
+    height: 3px;
+    left: 1;
+}
+
+.text-content a:hover:before{
+    width: 70%;
+    bottom: 19px;
+    transition: 0.7s ease;
+}
+
+
+
+
+
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+
+}
+
+.nav-bar .logo{
+    color: var(--white-color);
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+
+}
+
+.navigation .nav-items a{
+    color: var(--white-color);
+    font-size: 120%;
+    text-decoration: none;
+
+
+}
+
+.navigation .nav-items a:before{
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 0%;
+    height: 3px;
+    left: 1;
+
+}
+
+.navigation .nav-items a:hover:before{
+    width: 4.2%;
+    bottom: 27px;
+    transition: 0.4s ease;
+}
+
+
+.navigation .nav-items a i{
+    display: none;
+
+}
+
+.navigation .nav-items a:not(:last-child){
+    margin-right: 45px;
+
+}
+
+.container{
+    margin: 30px;
+
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.galleryheader{ 
+    position: absolute;
+    font-size: 60px;
+    top: 100px;
+    left: 760px;
+    color: var(--white-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.979);
+}
+
+.galleryheader span{
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+.image{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: 390px;
+    left: 160px;
+}
+
+.image img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.image:hover img{
+    opacity: 1;
+
+}
+
+.image .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.image .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 310;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.image .details h2 span{
+    font-weight: 900;
+}
+
+.image:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.image .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.image:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.image:hover .more{
+    bottom: 0;
+}
+
+
+
+
+
+.imagetwo{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: 390px;
+    left: 680px;
+}
+
+.imagetwo img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imagetwo:hover img{
+    opacity: 1;
+
+}
+
+.imagetwo .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imagetwo .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imagetwo .details h2 span{
+    font-weight: 900;
+}
+
+.imagetwo:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imagetwo .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imagetwo:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imagetwo:hover .more{
+    bottom: 0;
+}
+
+
+
+
+.imagethree{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: 390px;
+    left: 1200px;
+}
+
+.imagethree img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imagethree:hover img{
+    opacity: 1;
+
+}
+
+.imagethree .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imagethree .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imagethree .details h2 span{
+    font-weight: 900;
+}
+
+.imagethree:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imagethree .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imagethree:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imagethree:hover .more{
+    bottom: 0;
+}
+
+
+
+
+
+
+.imagefour{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -60px;
+    left: 160px;
+}
+
+.imagefour img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imagefour:hover img{
+    opacity: 1;
+
+}
+
+.imagefour .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imagefour .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imagefour .details h2 span{
+    font-weight: 900;
+}
+
+.imagefour:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imagefour .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imagefour:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imagefour:hover .more{
+    bottom: 0;
+}
+
+
+
+
+
+.imagefive{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -60px;
+    left: 680px;
+}
+
+.imagefive img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imagefive:hover img{
+    opacity: 1;
+
+}
+
+.imagefive .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imagefive .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imagefive .details h2 span{
+    font-weight: 900;
+}
+
+.imagefive:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imagefive .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imagefive:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imagefive:hover .more{
+    bottom: 0;
+
+}
+
+
+
+
+
+
+.imageseven{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -60px;
+    left: 1200px;
+}
+
+.imageseven img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imageseven:hover img{
+    opacity: 1;
+
+}
+
+.imageseven .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imageseven .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imageseven .details h2 span{
+    font-weight: 900;
+}
+
+.imageseven:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imageseven .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imageseven:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imageseven:hover .more{
+    bottom: 0;
+
+}
+
+
+
+
+.imageeigth{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -513px;
+    left: 160px;
+}
+
+.imageeigth img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imageeigth:hover img{
+    opacity: 1;
+
+}
+
+.imageeigth .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imageeigth .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imageeigth .details h2 span{
+    font-weight: 900;
+}
+
+.imageeigth:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imageeigth .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imageeigth:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imageeigth:hover .more{
+    bottom: 0;
+
+}
+
+
+
+
+
+.imagenine{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -513px;
+    left: 680px;
+}
+
+.imagenine img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imagenine:hover img{
+    opacity: 1;
+
+}
+
+.imagenine .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imagenine .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imagenine .details h2 span{
+    font-weight: 900;
+}
+
+.imagenine:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imagenine .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imagenine:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imagenine:hover .more{
+    bottom: 0;
+
+}
+
+
+
+
+
+.imageten{
+    background: #000000;
+    position: absolute;
+    flex: 1;
+    max-width: 480px;
+    height: 360px;
+    margin: 20px;
+    bottom: -513px;
+    left: 1200px;
+}
+
+.imageten img{
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    bottom: px;
+
+}
+
+.imageten:hover img{
+    opacity: 1;
+
+}
+
+.imageten .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+.imageten .details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 70px;
+    transition: 0.4s ease;
+    transition-property: transform;
+}
+
+.imageten .details h2 span{
+    font-weight: 900;
+}
+
+.imageten:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.imageten .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.imageten:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+
+}
+
+.imageten:hover .more{
+    bottom: 0;
+}
+
+
+
+.more .read-more{
+    color:#000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.more .read-more span{
+    font-weight: 900;
+
+}
+
+.more .icon-links i{
+    color: #000;
+    font-size: 20px;
+
+}
+
+.more .icon-links a:not(:last-child) i{
+    margin-right: 20px;
+}
+
+.gallerys img{
+    position: absolute;
+    width: 50px;
+    left: 170px;
+    bottom: 410px;
+}
+
+.containers{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+
+}
+
+.gallerys{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.michelle img{
+    position: absolute;
+    width: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer{
+     background-color: rgb(23, 26, 37);
+     position: absolute ;
+     width: 402.2%;
+     min-height: 350px;
+     padding: 3rem 1rem;
+     margin-bottom: -377px;
+     left: -1250px;
+     bottom: -250px;
+    
+}
+
+.lalagyan {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+                                
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.col{
+    min-width: 250px;
+    color:#f2f2f2f2;
+    font-family: poppins;
+    padding:0 2rem;
+
+}
+
+.col .logo{
+    width: 100px;
+    margin-bottom:25px;
+
+}
+
+.col h3{
+
+    color:#ff014fff;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.col h3::after{
+
+    content: '';
+    height:3px;
+    width:0px;
+    background-color: #ff014fff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+
+}
+
+.col h3:hover::after{
+    width:30px
+
+}
+
+
+
+
+.col .social a i{
+
+    color:#ff014fff;
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+
+}
+
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+
+}
+
+
+
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+
+}
+
+.col .links a::before{
+    content:'';
+    height: 16px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: #ff014fff;
+    transition: 0.5s ease;
+    opacity: 0;
+
+}
+
+.col .links a:hover::before{
+    opacity: 1;
+
+}
+
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:#ff014fff;
+
+}
+
+.col .contact-details{
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+
+.col .contact-details i{
+    margin-right:15px;
+
+}
+
+.row .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem 0;
+
+}
+
+.row .form input{
+    background-color: #1a1c20ff;
+    border:0;
+    outline:none;
+    padding:14px 20px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.form button{
+    padding:14px 20px;
+    border:0;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ff014fff;
+
+}
+
+
+@media(max-width:900px)
+{
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+
+@media(max-width:768px)
+{
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
